@@ -1,0 +1,133 @@
+main {
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(index-back.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-info {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: var(--blueColor);
+  margin: 10px 10px;
+  width: calc(33% - 20px);
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--whiteColor);
+  padding: 0 10px;
+}
+
+.contact-info:nth-child(1) .card:nth-child(1) {
+  animation: Slide_Up 0.6s linear;
+}
+
+.contact-info:nth-child(1) .card:nth-child(2) {
+  animation: Slide_Up 0.8s linear;
+}
+
+.contact-info:nth-child(1) .card:nth-child(3) {
+  animation: Slide_Up 1s linear;
+}
+
+.contact-info:nth-child(2) .card:nth-child(1) {
+  animation: Slide_Up 1.2s linear;
+}
+
+.contact-info:nth-child(2) .card:nth-child(2) {
+  animation: Slide_Up 1.4s linear;
+}
+
+.card-icon {
+  font-size: 30px;
+  background-color: var(--greenColor);
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px !important;
+  border-radius: 50%;
+  transition: 0.3s linear;
+}
+
+.card:hover .card-icon {
+  background: none;
+  color: var(--greenColor);
+  transform: scale(1.4);
+}
+
+.card p {
+  margin-top: 20px;
+  font-weight: 300px;
+  letter-spacing: 2px;
+  /* max-height: 0; */
+  opacity: 1;
+  transition: 0.3s linear;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.card:hover p {
+  max-height: 90px;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1300px) {
+  main {
+    padding-top: 200px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
+  }
+}
+
+@keyframes Slide_Up {
+  0% {
+    transform: translateY(250px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes Slide_Right {
+  0% {
+    transform: translateX(-350px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes Slide_Left {
+  0% {
+    transform: translateX(350px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

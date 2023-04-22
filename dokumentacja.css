@@ -1,0 +1,48 @@
+main {
+  height: 100vh;
+  width: 100%;
+  background-image: url(index-back.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text {
+  margin-left: 50px;
+}
+
+main h1 {
+  margin-bottom: 20px;
+  color: var(--whiteColor);
+  animation: Slide_Right 1s ease;
+}
+
+main p a {
+  color: var(--whiteColor);
+  font-size: var(--mediumFont);
+  line-height: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+main p {
+  animation: Slide_Right 1.2s ease;
+}
+
+main p a:hover {
+  color: var(--greenColor);
+}
+
+@keyframes Slide_Right {
+  0% {
+    transform: translateX(-350px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+

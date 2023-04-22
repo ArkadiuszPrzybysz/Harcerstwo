@@ -1,0 +1,128 @@
+main {
+  height: 100vh;
+  width: 100%;
+  background-image: url(index-back.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.main-logo {
+  max-width: 50vw;
+  width: 100%;
+  min-height: 20vh;
+  animation: Reveal 2s ease;
+}
+
+.main-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-info .info-names {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 40vw;
+}
+
+.main-info .info-names h1, p {
+  color: var(--whiteColor);
+  padding: 10px;
+  font-size: var(--mediumFont);
+}
+
+.main-info .info-names p {
+  font-size: var(--smallFont);
+  font-style: italic;
+}
+
+.text {
+  position: absolute;
+  z-index: 9;
+  text-transform: uppercase;
+  font-size: 4.5vw;
+  font-weight: 700;
+  color: var(--whiteColor);
+  text-shadow: 1px 1px 1px var(--brownColor),
+  1px 2px 1px var(--brownColor),
+  1px 3px 1px var(--brownColor),
+  1px 4px 1px var(--brownColor),
+  1px 5px 1px var(--brownColor),
+  1px 6px 1px var(--brownColor),
+  1px 7px 1px var(--brownColor),
+  1px 8px 1px var(--brownColor),
+  1px 18px 6px rgba(16, 16, 16, 0.4),
+  1px 22px 10px rgba(16, 16, 16, 0.2),
+  1px 25px 35px rgba(16, 16, 16, 0.2),
+  1px 30px 60px rgba(16, 16, 16, 0.2);
+  animation: Slide_Up 1s ease;
+}
+
+section {
+  position: relative;
+  padding: 100px;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  background-color: #698f3f;
+}
+
+@keyframes Slide_Up {
+  0% {
+    transform: translateY(250px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .main-logo {
+    max-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .text {
+    text-shadow: 1px 1px 1px var(--brownColor),
+    1px 2px 1px var(--brownColor),
+    1px 3px 1px var(--brownColor),
+    1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2),
+    1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.2);
+  }
+
+  main img {
+    height: 30%;
+  }
+}
